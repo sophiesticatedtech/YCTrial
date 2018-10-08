@@ -1,0 +1,195 @@
+<!Doctyp<!Doctype html>
+<html>
+<head>
+   <script>
+       function getRDWData() {
+       
+           var kenteken = document.getElementById("iKenteken").value;
+           var xhttp = new XMLHttpRequest();
+      
+           document.getElementById("kenteken").innerHTML = "";
+           document.getElementById("merk").innerHTML = "";
+           document.getElementById("voertuigsoort").innerHTML="";
+           document.getElementById("handelsbenaming").innerHTML="";
+           document.getElementById("eerste_kleur").innerHTML="";
+           document.getElementById("vervaldatum_apk").innerHTML="";
+
+           xhttp.onreadystatechange = function () {
+               if (this.readyState == 4 && this.status == 200) {
+         	       var s;
+         	       rdwdata = JSON.parse(this.responseText);
+
+                   console.log(rdwdata);
+                  
+                   if (rdwdata.length>0){
+                       document.getElementById("kenteken").innerHTML = rdwdata[0].kenteken;
+                       document.getElementById("merk").innerHTML = rdwdata[0].merk;
+                       document.getElementById("voertuigsoort").innerHTML = rdwdata[0].voertuigsoort;
+                       document.getElementById("handelsbenaming").innerHTML = rdwdata[0].handelsbenaming;
+                       document.getElementById("eerste_kleur").innerHTML = rdwdata[0].eerste_kleur;
+                       document.getElementById("vervaldatum_apk").innerHTML = rdwdata[0].vervaldatum_apk;
+                   } else {
+                       document.getElementById("kenteken").innerHTML = "***ONBEKEND***";
+                       document.getElementById("merk").innerHTML = "***ONBEKEND***";
+                       document.getElementById("voertuigsoort").innerHTML="***ONBEKEND***";
+                       document.getElementById("handelsbenaming").innerHTML="***ONBEKEND***";
+                       document.getElementById("eerste_kleur").innerHTML="***ONBEKEND***";
+                       document.getElementById("vervaldatum_apk").innerHTML="***ONBEKEND***";
+                   }
+
+               }   
+           };
+
+           xhttp.open("GET", "https://opendata.rdw.nl/resource/m9d7-ebf2.json?kenteken=" + kenteken  );
+           xhttp.setRequestHeader("Content-type", "application/json");
+           xhttp.send();
+       }
+   </script>
+</head>
+
+<body>
+   <h1>RDW Informatie over kentekens</h1>
+   <p>
+       Kentekeninformatie wordt op gevraagd uit de open data van het RDW
+   </p>
+   <ul>
+       <li>API: https://opendata.rdw.nl/resource/m9d7-ebf2.json</li>
+       <li>kenteken</li>
+   </ul>
+  
+   <div>
+       <label>Kenteken:</label>
+       <input type="text" id="iKenteken">       
+   </div>
+   <br>
+   <button onclick="getRDWData()">Haal data op</button>        
+   <br>
+   <br>
+   <table>
+       <tr>
+           <td>Kenteken</td>
+           <td id="kenteken"></td>
+       </tr>
+
+       <tr>
+           <td>Merk</td>
+           <td id="merk"></td>
+       </tr>
+       <tr>
+           <td>Voertuigsoort</td>
+           <td id="voertuigsoort"></td>
+       </tr>
+       <tr>
+           <td>Handelsbenaming</td>
+           <td id="handelsbenaming"></td>
+       </tr>
+       <tr>
+           <td>Eerste kleur</td>
+           <td id="eerste_kleur"></td>
+       </tr>
+       <tr>
+           <td>Vervaldatum APK</td>
+           <td id="vervaldatum_apk"></td>
+       </tr>
+   </table>
+</body>
+</html>
+
+e html>
+<html>
+<head>
+   <script>
+       function getRDWData() {
+       
+           var kenteken = document.getElementById("iKenteken").value;
+           var xhttp = new XMLHttpRequest();
+      
+           document.getElementById("kenteken").innerHTML = "";
+           document.getElementById("merk").innerHTML = "";
+           document.getElementById("voertuigsoort").innerHTML="";
+           document.getElementById("handelsbenaming").innerHTML="";
+           document.getElementById("eerste_kleur").innerHTML="";
+           document.getElementById("vervaldatum_apk").innerHTML="";
+
+           xhttp.onreadystatechange = function () {
+               if (this.readyState == 4 && this.status == 200) {
+         	       var s;
+         	       rdwdata = JSON.parse(this.responseText);
+
+                   console.log(rdwdata);
+                  
+                   if (rdwdata.length>0){
+                       document.getElementById("kenteken").innerHTML = rdwdata[0].kenteken;
+                       document.getElementById("merk").innerHTML = rdwdata[0].merk;
+                       document.getElementById("voertuigsoort").innerHTML = rdwdata[0].voertuigsoort;
+                       document.getElementById("handelsbenaming").innerHTML = rdwdata[0].handelsbenaming;
+                       document.getElementById("eerste_kleur").innerHTML = rdwdata[0].eerste_kleur;
+                       document.getElementById("vervaldatum_apk").innerHTML = rdwdata[0].vervaldatum_apk;
+                   } else {
+                       document.getElementById("kenteken").innerHTML = "***ONBEKEND***";
+                       document.getElementById("merk").innerHTML = "***ONBEKEND***";
+                       document.getElementById("voertuigsoort").innerHTML="***ONBEKEND***";
+                       document.getElementById("handelsbenaming").innerHTML="***ONBEKEND***";
+                       document.getElementById("eerste_kleur").innerHTML="***ONBEKEND***";
+                       document.getElementById("vervaldatum_apk").innerHTML="***ONBEKEND***";
+                   }
+
+               }   
+           };
+
+           xhttp.open("GET", "https://opendata.rdw.nl/resource/m9d7-ebf2.json?kenteken=" + kenteken  );
+           xhttp.setRequestHeader("Content-type", "application/json");
+           xhttp.send();
+       }
+   </script>
+</head>
+
+<body>
+   <h1>RDW Informatie over kentekens</h1>
+   <p>
+       Kentekeninformatie wordt op gevraagd uit de open data van het RDW
+   </p>
+   <ul>
+       <li>API: https://opendata.rdw.nl/resource/m9d7-ebf2.json</li>
+       <li>kenteken</li>
+   </ul>
+  
+   <div>
+       <label>Kenteken:</label>
+       <input type="text" id="iKenteken">       
+   </div>
+   <br>
+   <button onclick="getRDWData()">Haal data op</button>        
+   <br>
+   <br>
+   <table>
+       <tr>
+           <td>Kenteken</td>
+           <td id="kenteken"></td>
+       </tr>
+
+       <tr>
+           <td>Merk</td>
+           <td id="merk"></td>
+       </tr>
+       <tr>
+           <td>Voertuigsoort</td>
+           <td id="voertuigsoort"></td>
+       </tr>
+       <tr>
+           <td>Handelsbenaming</td>
+           <td id="handelsbenaming"></td>
+       </tr>
+       <tr>
+           <td>Eerste kleur</td>
+           <td id="eerste_kleur"></td>
+       </tr>
+       <tr>
+           <td>Vervaldatum APK</td>
+           <td id="vervaldatum_apk"></td>
+       </tr>
+   </table>
+</body>
+</html>
+
+

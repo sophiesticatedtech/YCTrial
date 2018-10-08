@@ -1,0 +1,53 @@
+<!Doctyp<!Doctype html>
+<html>
+<head>
+
+</head>
+
+<body>
+   <h1>RDW Informatie over kentekens</h1>
+   <p>
+       Kentekeninformatie wordt op gevraagd uit de open data van het RDW
+   </p>
+   <ul>
+       <li>API: https://opendata.rdw.nl/resource/m9d7-ebf2.json</li>
+       <li>kenteken</li>
+   </ul>
+  
+   <div>
+       <label>Kenteken:</label>
+       <input type="text" id="iKenteken">       
+   </div>
+   <br>
+   <button onclick="getRDWData()">Haal data op</button>        
+   <br>
+   <br>
+   <table>
+       <tr>
+           <td>Kenteken</td>
+           <td id="kenteken"></td>
+       </tr>
+
+       <tr>
+           <td>Merk</td>
+           <td id="merk"></td>
+       </tr>
+       <tr>
+           <td>Voertuigsoort</td>
+           <td id="voertuigsoort"></td>
+       </tr>
+       <tr>
+           <td>Handelsbenaming</td>
+           <td id="handelsbenaming"></td>
+       </tr>
+       <tr>
+           <td>Eerste kleur</td>
+           <td id="eerste_kleur"></td>
+       </tr>
+       <tr>
+           <td>Vervaldatum APK</td>
+           <td id="vervaldatum_apk"></td>
+       </tr>
+   </table>
+</body>
+</html>
