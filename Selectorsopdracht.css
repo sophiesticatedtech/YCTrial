@@ -1,0 +1,75 @@
+/* De achtergrond van de body moet zwart zijn */
+
+body { 
+   background-color:black;
+}
+
+/* Alle paragrafen moeten een blauwe achtergrond hebben. */
+
+p {
+    background-color:blue;
+}
+
+/* Wijzig de standaard cursor voor het button element. */
+button {
+    cursor:pointer;
+}
+
+/* klasse groen moet een groene achtergrond hebben. */
+
+.groen {
+    background-color:green;
+}
+/* Headers gecentreerd en in het wit */
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+.header {
+    background-color:lightblue;
+}
+
+/* Maak een mooie navigatiebar */
+
+nav {
+    width: 400px;
+    background-color:pink;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+nav a:hover {
+    background-color:palevioletred;
+    color: white;
+}
+
+/* maak nu 3 kolommen om de teksten in te toenen, en die naast elkaar floaten */
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* laat de 3 kolommen stapelen in plaats van naast elkaar, indien het scherm te smal wordt */
+
+@media screen and (max-width: 1000px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
