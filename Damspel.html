@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Checkers game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="Damspel.css" />
+    <script src="Damspel.js"></script>
+</head>
+
+<body> 
+
+<button onclick="startgame()">Start Checkers Game</button>
+
+<table class="checkersboard">
+        <tr class="checkersboard">
+            <td id="1001" class="checkersboard"></td>
+            <td id="1002" class="checkersboard"></td>
+            <td id="1003" class="checkersboard"></td>
+            <td id="1004" class="checkersboard"></td>
+            <td id="1005" class="checkersboard"></td>
+            <td id="1006" class="checkersboard"></td>
+            <td id="1007" class="checkersboard"></td>
+            <td id="1008" class="checkersboard"></td>
+            <td id="1009" class="checkersboard"></td>
+            <td id="1010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="2001" class="checkersboard"></td>
+            <td id="2002" class="checkersboard"></td>
+            <td id="2003" class="checkersboard"></td>
+            <td id="2004" class="checkersboard"></td>
+            <td id="2005" class="checkersboard"></td>
+            <td id="2006" class="checkersboard"></td>
+            <td id="2007" class="checkersboard"></td>
+            <td id="2008" class="checkersboard"></td>
+            <td id="2009" class="checkersboard"></td>
+            <td id="2010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="3001" class="checkersboard"></td>
+            <td id="3002" class="checkersboard"></td>
+            <td id="3003" class="checkersboard"></td>
+            <td id="3004" class="checkersboard"></td>
+            <td id="3005" class="checkersboard"></td>
+            <td id="3006" class="checkersboard"></td>
+            <td id="3007" class="checkersboard"></td>
+            <td id="3008" class="checkersboard"></td>
+            <td id="3009" class="checkersboard"></td>
+            <td id="3010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="4001" class="checkersboard"></td>
+            <td id="4002" class="checkersboard"></td>
+            <td id="4003" class="checkersboard"></td>
+            <td id="4004" class="checkersboard"></td>
+            <td id="4005" class="checkersboard"></td>
+            <td id="4006" class="checkersboard"></td>
+            <td id="4007" class="checkersboard"></td>
+            <td id="4008" class="checkersboard"></td>
+            <td id="4009" class="checkersboard"></td>
+            <td id="4010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="5001" class="checkersboard"></td>
+            <td id="5002" class="checkersboard"></td>
+            <td id="5003" class="checkersboard"></td>
+            <td id="5004" class="checkersboard"></td>
+            <td id="5005" class="checkersboard"></td>
+            <td id="5006" class="checkersboard"></td>
+            <td id="5007" class="checkersboard"></td>
+            <td id="5008" class="checkersboard"></td>
+            <td id="5009" class="checkersboard"></td>
+            <td id="5010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="6001" class="checkersboard"></td>
+            <td id="6002" class="checkersboard"></td>
+            <td id="6003" class="checkersboard"></td>
+            <td id="6004" class="checkersboard"></td>
+            <td id="6005" class="checkersboard"></td>
+            <td id="6006" class="checkersboard"></td>
+            <td id="6007" class="checkersboard"></td>
+            <td id="6008" class="checkersboard"></td>
+            <td id="6009" class="checkersboard"></td>
+            <td id="6010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="7001" class="checkersboard"></td>
+            <td id="7002" class="checkersboard"></td>
+            <td id="7003" class="checkersboard"></td>
+            <td id="7004" class="checkersboard"></td>
+            <td id="7005" class="checkersboard"></td>
+            <td id="7006" class="checkersboard"></td>
+            <td id="7007" class="checkersboard"></td>
+            <td id="7008" class="checkersboard"></td>
+            <td id="7009" class="checkersboard"></td>
+            <td id="7010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="8001" class="checkersboard"></td>
+            <td id="8002" class="checkersboard"></td>
+            <td id="8003" class="checkersboard"></td>
+            <td id="8004" class="checkersboard"></td>
+            <td id="8005" class="checkersboard"></td>
+            <td id="8006" class="checkersboard"></td>
+            <td id="8007" class="checkersboard"></td>
+            <td id="8008" class="checkersboard"></td>
+            <td id="8009" class="checkersboard"></td>
+            <td id="8010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="9001" class="checkersboard"></td>
+            <td id="9002" class="checkersboard"></td>
+            <td id="9003" class="checkersboard"></td>
+            <td id="9004" class="checkersboard"></td>
+            <td id="9005" class="checkersboard"></td>
+            <td id="9006" class="checkersboard"></td>
+            <td id="9007" class="checkersboard"></td>
+            <td id="9008" class="checkersboard"></td>
+            <td id="9009" class="checkersboard"></td>
+            <td id="9010" class="checkersboard"></td>
+        </tr>
+        <tr class="checkersboard">
+            <td id="10001" class="checkersboard"></td>
+            <td id="10002" class="checkersboard"></td>
+            <td id="10003" class="checkersboard"></td>
+            <td id="10004" class="checkersboard"></td>
+            <td id="10005" class="checkersboard"></td>
+            <td id="10006" class="checkersboard"></td>
+            <td id="10007" class="checkersboard"></td>
+            <td id="10008" class="checkersboard"></td>
+            <td id="10009" class="checkersboard"></td>
+            <td id="10010" class="checkersboard"></td>
+        </tr>
+        </table>
+
+    </body>
+    </html>
